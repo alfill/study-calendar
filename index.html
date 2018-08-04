@@ -5,6 +5,7 @@
      <meta charset='utf-8'>
      <title>Учебно-плановый календарь</title>
      <meta name="description" content="Календарь учебной деятельности">
+     <!-- <meta http-equiv="Cache-Control" content="public" >  -->
      
      <meta name="apple-mobile-web-app-capable" content="yes">
      <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -25,7 +26,7 @@
             $('.calendar').fullCalendar({
          locale: 'ru',
            defaultView: 'month',
-           defaultDate: '2018-07-07',
+           defaultDate: '2018-08-07',
            header: {
              left: 'prev,next, today',
              center: 'title',
@@ -34,61 +35,63 @@
            events: [
              {
                title: 'All Day Event',
-               start: '2018-07-01'
+               start: '2018-08-01'
              },
              {
                title: 'Long Event',
-               start: '2018-07-07',
-               end: '2018-07-10'
+               start: '2018-08-07',
+               end: '2018-08-10'
              },
              {
                id: 999,
                title: 'Repeating Event',
-               start: '2018-07-09T16:00:00'
+               start: '2018-08-09T16:00:00'
              },
              {
                id: 999,
                title: 'Repeating Event',
-               start: '2018-07-16T16:00:00'
+               start: '2018-08-16T16:00:00'
              },
              {
                title: 'Conference',
-               start: '2018-07-11',
-               end: '2018-07-13'
+               start: '2018-08-11',
+               end: '2018-08-13'
              },
              {
                title: 'Meeting',
-               start: '2018-07-12T10:30:00',
-               end: '2018-07-12T12:30:00'
+               start: '2018-08-12T10:30:00',
+               end: '2018-08-12T12:30:00'
              },
              {
                title: 'Lunch',
-               start: '2018-07-12T12:00:00'
+               start: '2018-08-12T12:00:00'
              },
              {
                title: 'Meeting',
-               start: '2018-07-12T14:30:00'
+               start: '2018-08-12T14:30:00'
              },
              {
                title: 'Birthday Party',
-               start: '2018-07-13T07:00:00'
+               start: '2018-08-13T07:00:00'
              },
              {
                title: 'Google sample event',
                url: 'http://google.com/',
-               start: '2018-07-28'
+               start: '2018-08-28'
              }
            ]
          });
          
+
+
          $('.calendar-list').fullCalendar({
          locale: 'ru',
            defaultView: 'listMonth',
-           defaultDate: '2018-07-07',
+           defaultDate: '2018-08-07',
            header: {
              left: 'prev,next',
              center: 'title',
-             right: 'listMonth,agendaDay'
+             right: 'listMonth'
            },
            views: {
              month: { // name of view
@@ -100,49 +103,49 @@
            events: [
              {
                title: 'All Day Event',
-               start: '2018-07-01'
+               start: '2018-08-01'
              },
              {
                title: 'Long Event',
-               start: '2018-07-07',
-               end: '2018-07-10'
+               start: '2018-08-07',
+               end: '2018-08-10'
              },
              {
                id: 999,
                title: 'Repeating Event',
-               start: '2018-07-09T16:00:00'
+               start: '2018-08-09T16:00:00'
              },
              {
                id: 999,
                title: 'Repeating Event',
-               start: '2018-07-16T16:00:00'
+               start: '2018-08-16T16:00:00'
              },
              {
                title: 'Conference',
-               start: '2018-07-11',
-               end: '2018-07-13'
+               start: '2018-08-11',
+               end: '2018-08-13'
              },
              {
                title: 'Meeting',
-               start: '2018-07-12T10:30:00',
-               end: '2018-07-12T12:30:00'
+               start: '2018-08-12T10:30:00',
+               end: '2018-08-12T12:30:00'
              },
              {
                title: 'Lunch',
-               start: '2018-07-12T12:00:00'
+               start: '2018-08-12T12:00:00'
              },
              {
                title: 'Meeting',
-               start: '2018-07-12T14:30:00'
+               start: '2018-08-12T14:30:00'
              },
              {
                title: 'Birthday Party',
-               start: '2018-07-13T07:00:00'
+               start: '2018-08-13T07:00:00'
              },
              {
                title: 'Click for Google',
                url: 'http://google.com/',
-               start: '2018-07-28'
+               start: '2018-08-28'
              }
            ]
          });
