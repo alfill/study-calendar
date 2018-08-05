@@ -15,11 +15,11 @@
      
       <link href='fullcalendar.min.css' rel='stylesheet' />
       <link href='fullcalendar.print.min.css' rel='stylesheet' media='print' />
-      <script src='lib/moment.min.js'></script>
-      <script src='lib/jquery.min.js'></script>
-      <script src='fullcalendar.min.js'></script>
-      <script type='text/javascript' src='fullcalendar/gcal.min.js'></script>
-      <script src='locale/ru.js'></script>
+      <script type='text/javascript' src='lib/moment.min.js'></script>
+      <script type='text/javascript' src='lib/jquery.min.js'></script>
+      <script type='text/javascript' src='fullcalendar.min.js'></script>
+      <script type='text/javascript' src='gcal.min.js'></script>
+      <script type='text/javascript' src='locale/ru.js'></script>
       
      <script>
          $(document).ready(function() {
@@ -27,7 +27,7 @@
           $('.calendar').fullCalendar({
            locale: 'ru',
            defaultView: 'month',
-           defaultDate: '2018-07-07',
+           /*defaultDate: '2018-07-07',*/
            header: {
              left: 'prev,next, today',
              center: 'title',
@@ -36,6 +36,7 @@
 
            googleCalendarApiKey: 'AIzaSyBYgq9BrBuBm9e4BstpAOfdJ2Cl8agVHKo',
            events: 'ui8bjsvlc4043r3kdo0vo9ubns@group.calendar.google.com',
+           eventColor: '#D50000',
 
            eventClick: function(event) {
               // opens events in a popup window
@@ -63,6 +64,7 @@
            
            googleCalendarApiKey: 'AIzaSyBYgq9BrBuBm9e4BstpAOfdJ2Cl8agVHKo',
            events: 'ui8bjsvlc4043r3kdo0vo9ubns@group.calendar.google.com',
+           eventColor: '#D50000',
 
            eventClick: function(event) {
               // opens events in a popup window
