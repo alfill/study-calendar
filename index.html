@@ -5,7 +5,9 @@
      <meta charset='utf-8'>
      <title>Учебно-плановый календарь</title>
      <meta name="description" content="Календарь учебной деятельности">
-     <!-- <meta http-equiv="Cache-Control" content="public" >  -->
+     
+     <meta http-equiv="Cache-Control" content="public" >  <!-- кеширование -->
+     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
      
      <meta name="apple-mobile-web-app-capable" content="yes">
      <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -26,7 +28,7 @@
             $('.calendar').fullCalendar({
          locale: 'ru',
            defaultView: 'month',
-           defaultDate: '2018-08-07',
+           
            header: {
              left: 'prev,next, today',
              center: 'title',
@@ -87,7 +89,7 @@
          $('.calendar-list').fullCalendar({
          locale: 'ru',
            defaultView: 'listMonth',
-           defaultDate: '2018-08-07',
+           
            header: {
              left: 'prev,next',
              center: 'title',
