@@ -21,12 +21,14 @@
       <script src='lib/jquery.min.js'></script>
       <script src='fullcalendar.min.js'></script>
       <script src='locale/ru.js'></script>
+      <script src='locale/be.js'></script>
       
      <script>
          $(document).ready(function() {
+         	var initialLocaleCode = 'ru';
          
             $('.calendar').fullCalendar({
-         locale: 'ru',
+         locale: initialLocaleCode,
            defaultView: 'month',
            
            header: {
@@ -87,7 +89,7 @@
 
 
          $('.calendar-list').fullCalendar({
-         locale: 'ru',
+         locale: initialLocaleCode,
            defaultView: 'listMonth',
            
            header: {
@@ -152,28 +154,57 @@
            ]
          });
          
+          // build the locale selector's options
+  $.each($.fullCalendar.locales, function(localeCode) {
+    $('#locale-selector').append(
+      $('<option/>')
+        .attr('value', localeCode)
+        .prop('selected', localeCode == initialLocaleCode)
+        .text(localeCode)
+    );
+  });
+
+  // when the selected option changes, dynamically change the calendar option
+  $('#locale-selector').on('change', function() {
+    if (this.value) {
+      $('.calendar').fullCalendar('option', 'locale', this.value),
+      $('.calendar-list').fullCalendar('option', 'locale', this.value);
+    }
+  });
+
          });
          
      </script>
 
      <style>
-         body {
-         margin: 40px 10px;
-         padding: 0;
-         font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-         font-size: 14px;
-         }
-         .calendar, .calendar-list {
-         max-width: 900px;
-         margin: 0 auto;
-         }
+         body { margin: 40px 10px;
+         		padding: 0;
+         		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+         		font-size: 14px; 
+         	  }
+         #top { background: #eee;
+  				border-bottom: 1px solid #ddd;
+  				padding: 0 10px;
+  				line-height: 40px;
+  				font-size: 12px; 
+  			  }
+         .calendar, .calendar-list { max-width: 900px;
+         							 margin: 0 auto; 
+         							}
      </style>
    </head>
 
    <body>
-      <div class='calendar'></div>
+
+	<div id='top'>
+  	Locales:
+  		<select id='locale-selector'></select>
+	</div>
+
+     <div class='calendar'></div>
       <br/>  
-      <div class='calendar-list'></div>
+     <div class='calendar-list'></div>
+   
    </body>
 
 </html>
