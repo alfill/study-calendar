@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# Версия 1
+# Версия 1.15
 
 CACHE:
 fullcalendar.min.css
@@ -11,8 +11,8 @@ gcal.min.js
 locale/ru.js
 locale/be.js
 images/favicon.ico
-images/icons-192.png.png
-images/icons-512.png.png
+images/icons-192.png
+images/icons-512.png
 
 # NETWORK:
 # index.php
