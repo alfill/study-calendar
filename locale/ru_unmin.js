@@ -53,7 +53,7 @@
             }
             ), n.locale("ru", {
                 buttonText: {
-                    month: "Месяц", week: "Неделя", day: "День", list: "Повестка дня"
+                    agendaWeek: "Месяц", month: "Месяц", week: "Неделя", agendaDay: "Расписание дня", day: "День", listMonth: "События месяца", list: "Повестка дня"
                 }
                 , allDayText:"Весь день", eventLimitText:function(e) {
                     return"+ ещё "+e

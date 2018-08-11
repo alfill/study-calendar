@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" manifest="calendar.appcache appcache.manifest">
 
    <head>
      <meta charset='utf-8'>
      <title>Учебно-плановый календарь</title>
      <meta name="description" content="Календарь учебной деятельности">
      
-     <meta http-equiv="Cache-Control" content="public" >  <!-- кеширование -->
+     <meta http-equiv="Cache-Control" content="public, max-age=21600, must-revalidate" >
      <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
      
      <meta name="apple-mobile-web-app-capable" content="yes">
      <meta name="apple-mobile-web-app-status-bar-style" content="black">
      
-     <link rel="manifest" href="manifest.json">
+     <link rel="manifest" href="manifest.json" type="application/manifest+json">
      <link rel="shortcut icon" type="image/x-icon" sizes="16x16" href="images/favicon.ico">
      
       <link href='fullcalendar.min.css' rel='stylesheet' />
       <link href='fullcalendar.print.min.css' rel='stylesheet' media='print' />
-      <script src='lib/moment.min.js'></script>
-      <script src='lib/jquery.min.js'></script>
-      <script src='fullcalendar.min.js'></script>
-      <script src='locale/ru.js'></script>
-      <script src='locale/be.js'></script>
+      <script type='text/javascript' src='lib/moment.min.js'></script>
+      <script type='text/javascript' src='lib/jquery.min.js'></script>
+      <script type='text/javascript' src='fullcalendar.min.js'></script>
+      <script type='text/javascript' src='gcal.min.js'></script>
+      <script type='text/javascript' src='locale/ru.js'></script>
+      <!-- <script src='locale/be.js'></script> -->
       
      <script>
          $(document).ready(function() {
-         	var initialLocaleCode = 'ru';
+           //var initialLocaleCode = 'ru';
          
-            $('.calendar').fullCalendar({
-         locale: initialLocaleCode,
+           $('.calendar').fullCalendar({
+           locale: 'ru',
            defaultView: 'month',
            
            header: {
@@ -36,60 +37,21 @@
              center: 'title',
              right: 'month,agendaWeek'
            },
-           events: [
-             {
-               title: 'All Day Event',
-               start: '2018-08-01'
-             },
-             {
-               title: 'Long Event',
-               start: '2018-08-07',
-               end: '2018-08-10'
-             },
-             {
-               id: 999,
-               title: 'Repeating Event',
-               start: '2018-08-09T16:00:00'
-             },
-             {
-               id: 999,
-               title: 'Repeating Event',
-               start: '2018-08-16T16:00:00'
-             },
-             {
-               title: 'Conference',
-               start: '2018-08-11',
-               end: '2018-08-13'
-             },
-             {
-               title: 'Meeting',
-               start: '2018-08-12T10:30:00',
-               end: '2018-08-12T12:30:00'
-             },
-             {
-               title: 'Lunch',
-               start: '2018-08-12T12:00:00'
-             },
-             {
-               title: 'Meeting',
-               start: '2018-08-12T14:30:00'
-             },
-             {
-               title: 'Birthday Party',
-               start: '2018-08-13T07:00:00'
-             },
-             {
-               title: 'Google sample event',
-               url: 'http://google.com/',
-               start: '2018-08-28'
-             }
-           ]
+           googleCalendarApiKey: 'AIzaSyCmHj32T4q0P2_cmXAzqwtaQAyw2B8zMwQ',
+           events: 'ui8bjsvlc4043r3kdo0vo9ubns@group.calendar.google.com',
+           eventColor: '#D50000',
+
+           eventClick: function(event) {
+              // opens events in a popup window
+              window.open(event.url, '_blank', 'width=700,height=600');  
+              return false;
+           }  
          });
          
 
 
          $('.calendar-list').fullCalendar({
-         locale: initialLocaleCode,
+         locale: 'ru',
            defaultView: 'listMonth',
            
            header: {
@@ -104,56 +66,19 @@
            }
          },
            
-           events: [
-             {
-               title: 'All Day Event',
-               start: '2018-08-01'
-             },
-             {
-               title: 'Long Event',
-               start: '2018-08-07',
-               end: '2018-08-10'
-             },
-             {
-               id: 999,
-               title: 'Repeating Event',
-               start: '2018-08-09T16:00:00'
-             },
-             {
-               id: 999,
-               title: 'Repeating Event',
-               start: '2018-08-16T16:00:00'
-             },
-             {
-               title: 'Conference',
-               start: '2018-08-11',
-               end: '2018-08-13'
-             },
-             {
-               title: 'Meeting',
-               start: '2018-08-12T10:30:00',
-               end: '2018-08-12T12:30:00'
-             },
-             {
-               title: 'Lunch',
-               start: '2018-08-12T12:00:00'
-             },
-             {
-               title: 'Meeting',
-               start: '2018-08-12T14:30:00'
-             },
-             {
-               title: 'Birthday Party',
-               start: '2018-08-13T07:00:00'
-             },
-             {
-               title: 'Click for Google',
-               url: 'http://google.com/',
-               start: '2018-08-28'
-             }
-           ]
+           googleCalendarApiKey: 'AIzaSyCmHj32T4q0P2_cmXAzqwtaQAyw2B8zMwQ',
+           events: 'ui8bjsvlc4043r3kdo0vo9ubns@group.calendar.google.com',
+           eventColor: '#D50000',
+          // lazyFetching: true,
+
+           eventClick: function(event) {
+              // opens events in a popup window
+              window.open(event.url, '_blank', 'width=700,height=600');  
+              return false;
+           }  
+
          });
-         
+         /*
           // build the locale selector's options
   $.each($.fullCalendar.locales, function(localeCode) {
     $('#locale-selector').append(
@@ -161,7 +86,7 @@
         .attr('value', localeCode)
         .prop('selected', localeCode == initialLocaleCode)
         .text(localeCode)
-    );
+    ); 
   });
 
   // when the selected option changes, dynamically change the calendar option
@@ -170,7 +95,7 @@
       $('.calendar').fullCalendar('option', 'locale', this.value),
       $('.calendar-list').fullCalendar('option', 'locale', this.value);
     }
-  });
+  });   */
 
          });
          
@@ -182,12 +107,12 @@
          		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
          		font-size: 14px; 
          	  }
-         #top { background: #eee;
+       /*  #top { background: #eee;
   				border-bottom: 1px solid #ddd;
   				padding: 0 10px;
   				line-height: 40px;
   				font-size: 12px; 
-  			  }
+  			  }  */
          .calendar, .calendar-list { max-width: 900px;
          							 margin: 0 auto; 
          							}
@@ -196,10 +121,10 @@
 
    <body>
 
-	<div id='top'>
+<!-- <div id='top'>
   	Locales:
   		<select id='locale-selector'></select>
-	</div>
+	</div>  -->
 
      <div class='calendar'></div>
       <br/>  

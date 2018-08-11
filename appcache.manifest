@@ -1,0 +1,21 @@
+CACHE MANIFEST
+# Версия 1
+
+CACHE:
+fullcalendar.min.css
+fullcalendar.print.min.css
+fullcalendar.min.js
+lib/moment.min.js
+lib/jquery.min.js
+gcal.min.js
+locale/ru.js
+locale/be.js
+images/favicon.ico
+images/*.png
+
+
+# NETWORK:
+# index.php
+
+# FALLBACK:
+# *.html /offline.html
