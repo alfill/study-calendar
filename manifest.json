@@ -23,7 +23,7 @@
   "start_url": "./?utm_source=web_app_manifest",
   "scope": "/calendar/",
   
-};
+}
 /*  enum AppBannerPromptOutcome {
   "accepted",
   "dismissed",
