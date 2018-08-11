@@ -11,8 +11,8 @@ gcal.min.js
 locale/ru.js
 locale/be.js
 images/favicon.ico
-images/*.png
-
+images/icons-192.png.png
+images/icons-512.png.png
 
 # NETWORK:
 # index.php
