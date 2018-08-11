@@ -1,8 +1,3 @@
- enum AppBannerPromptOutcome {
-  "accepted",
-  "dismissed",
-  };
-
 {
   "lang": "ru",
   "name": "Учебный календарь",
@@ -29,3 +24,8 @@
   "scope": "/calendar/",
   
 };
+/*  enum AppBannerPromptOutcome {
+  "accepted",
+  "dismissed",
+  };
+ */
