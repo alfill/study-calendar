@@ -1,15 +1,20 @@
+ enum AppBannerPromptOutcome {
+  "accepted",
+  "dismissed",
+  };
+
 {
   "lang": "ru",
-  "short_name": "SCalendar",
   "name": "Учебный календарь",
+  "short_name": "Расписание",
   "icons": [
     {
-      "src": "/images/icons-192.png",
+      "src": "images/icons-192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/images/icons-512.png",
+      "src": "images/icons-512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -17,8 +22,10 @@
   
   "theme_color": "#3367D6",
   "background_color": "#cce6ff",
-  "start_url": "/calendar/?source=pwa",
-  "display": "standalone",
-  "orientation": "natural",
-  "scope": "/calendar/"
-}
+  "display": "fullscreen",
+  "orientation": "landscape-primary",
+
+  "start_url": "./?utm_source=web_app_manifest",
+  "scope": "/calendar/",
+  
+};
