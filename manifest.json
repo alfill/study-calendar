@@ -24,8 +24,3 @@
   "scope": "/calendar/",
   
 };
-
-/*  enum AppBannerPromptOutcome {
-  "accepted",
-  "dismissed",
-  }; */
