@@ -19,6 +19,6 @@
   "background_color": "#cce6ff",
   "display": "fullscreen",
   "orientation": "landscape-primary",
-  "start_url": "./?utm_source=web_app_manifest",
+  "start_url": "index.html",
   "scope": "/calendar/"
 }
