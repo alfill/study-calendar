@@ -84,23 +84,39 @@
      </script>
 
      <style>
-         body { margin: 40px 10px;
+        body { margin: 40px 10px;
          		padding: 0;
          		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
          		font-size: 14px; 
          	  }
 
-         .calendar, .calendar-list { max-width: 900px;
-         							 margin: 0 auto; 
-         							}
+        .calendar, .calendar-list { max-width: 900px;
+            margin: 0 auto;
+            }
+        #bottom { background: #eee;
+  				border-bottom: 1px solid #ddd;
+          padding: 0 10px;
+          margin-top: 20px;
+  				line-height: 40px;
+          font-size: 14px;
+          }
+        .locale {
+					font-size: 14px;
+					text-decoration-style: dotted;
+          color: gray;
+          }
      </style>
    </head>
 
    <body>
 
      <div class='calendar'></div>
-      <br/>  
+     <br/>  
      <div class='calendar-list'></div>
+
+     <div id='bottom' class='fc'>
+      Переключить на <a href='default.html' class='locale'> белорусский язык </a>
+    </div>
    
    </body>
 
