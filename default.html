@@ -20,7 +20,6 @@
       <script type='text/javascript' src='lib/moment.min.js'></script>
       <script type='text/javascript' src='lib/jquery.min.js'></script>
       <script type='text/javascript' src='fullcalendar.min.js'></script>
-      <script type='text/javascript' src='gcal.min.js'></script>
       <script type='text/javascript' src='locale/be.js'></script>
       
      <script>
@@ -29,17 +28,30 @@
           $('.calendar').fullCalendar({
            locale: 'be',
            defaultView: 'month',
-           /*defaultDate: '2018-07-07',*/
            header: {
              left: 'prev,next, today',
              center: 'title',
              right: 'month,agendaWeek'
            },
 
-           /* googleCalendarApiKey: 'AIzaSyBYgq9BrBuBm9e4BstpAOfdJ2Cl8agVHKo', */
-           googleCalendarApiKey: 'AIzaSyCmHj32T4q0P2_cmXAzqwtaQAyw2B8zMwQ', 
-                                  
-           events: 'ui8bjsvlc4043r3kdo0vo9ubns@group.calendar.google.com',
+            events: [
+    		{
+		      title  : 'День Рождения Завидов А.В',
+		      start  : '2018-06-22'
+		    },
+		    {
+		      title  : 'День Независимости РБ',
+ 		      start  : '2018-07-03'
+ 		    },
+  	 	    {
+		      title  : 'Первый звонок',
+		      start  : '2018-09-01'
+		    },
+		    {
+		      title  : 'День Учителя',
+		      start  : '2018-10-08'
+		    }
+		  ],
            eventColor: '#D50000',
 
            eventClick: function(event) {
@@ -66,8 +78,24 @@
              }
            },
            
-           googleCalendarApiKey: 'AIzaSyCmHj32T4q0P2_cmXAzqwtaQAyw2B8zMwQ',
-           events: 'ui8bjsvlc4043r3kdo0vo9ubns@group.calendar.google.com',
+           events: [
+    		{
+		      title  : 'День Рождения Завидов А.В',
+		      start  : '2018-06-22'
+		    },
+		    {
+		      title  : 'День Независимости РБ',
+ 		      start  : '2018-07-03'
+ 		    },
+  	 	    {
+		      title  : 'Первый звонок',
+		      start  : '2018-09-01'
+		    },
+		    {
+		      title  : 'День Учителя',
+		      start  : '2018-10-08'
+		    }
+		  ],
            eventColor: '#D50000',
            lazyFetching: true,
 
@@ -85,16 +113,30 @@
      </script>
 
      <style>
-         body {
-         margin: 40px 10px;
-         padding: 0;
-         font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-         font-size: 14px;
+         body { margin: 40px 10px;
+          padding: 0;
+          font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+          font-size: 14px;
          }
-         .calendar, .calendar-list {
-         max-width: 900px;
-         margin: 0 auto;
+         .calendar, .calendar-list { 
+          max-width: 900px;
+          margin: 0 auto;
          }
+         #bottom { background: #eee;
+  				border-bottom: 1px solid #ddd;
+          padding: 0 10px;
+          max-width: 900px;
+          margin: 0 auto;
+          margin-top: 20px; 
+  				line-height: 40px;
+          font-size: 14px;
+          }
+
+        .locale { padding: 10px 0;
+					font-size: 14px;
+					text-decoration-style: dotted;
+          color: gray;
+        }
      </style>
    </head>
 
@@ -102,6 +144,9 @@
       <div class='calendar'></div>
       <br/>  
       <div class='calendar-list'></div>
+      <div id='bottom' class='fc'>
+        Пераключыць на <a href='index.html' class='locale'> рускую мову </a>
+      </div>
    </body>
 
 </html>

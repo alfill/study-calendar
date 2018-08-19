@@ -20,7 +20,6 @@
       <script type='text/javascript' src='lib/moment.min.js'></script>
       <script type='text/javascript' src='lib/jquery.min.js'></script>
       <script type='text/javascript' src='fullcalendar.min.js'></script>
-      <script type='text/javascript' src='gcal.min.js'></script>
       <script type='text/javascript' src='locale/ru.js'></script> 
       
      <script>
@@ -121,7 +120,22 @@
 
          .calendar, .calendar-list { max-width: 900px;
          							 margin: 0 auto; 
-         							}
+                       }
+         #bottom { background: #eee;
+  				border-bottom: 1px solid #ddd;
+          padding: 0 10px;
+          max-width: 900px;
+          margin: 0 auto;
+          margin-top: 20px; 
+  				line-height: 40px;
+          font-size: 14px;
+          }
+
+        .locale { padding: 10px 0;
+					font-size: 14px;
+					text-decoration-style: dotted;
+          color: gray;
+        }
      </style>
    </head>
 
@@ -130,7 +144,11 @@
      <div class='calendar'></div>
       <br/>  
      <div class='calendar-list'></div>
-   
+     
+     <div id='bottom' class='fc'>
+      Переключить на <a href='default.html' class='locale'> белорусский язык </a>
+    </div>
+
    </body>
 
 </html>
