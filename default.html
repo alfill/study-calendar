@@ -102,14 +102,17 @@
           margin: 0 auto;
           margin-top: 20px; 
   				line-height: 40px;
-          font-size: 14px;
+          font-size: 13px;
           }
 
-        .locale { padding: 10px 0;
-					font-size: 14px;
-					text-decoration-style: dotted;
+        .locale { 
+          text-decoration-style: dotted;
           color: gray;
+          float: left;
         }
+        .addcal { float: right;
+          text-align: right; 
+          }
      </style>
    </head>
 
@@ -119,7 +122,10 @@
       <div class='calendar-list'></div>
 
       <div id='bottom' class='fc'>
-        Пераключыць на <a href='index.html' class='locale'> рускую мову </a>
+        <span style='float: left; text-align: left;'>Пераключыць на&#8194;</span>
+        <a href='index.html' class='locale'>рускую мову </a>
+        <a href="webcal://calendar.google.com/calendar/ical/ui8bjsvlc4043r3kdo0vo9ubns%40group.calendar.google.com/public/basic.ics" class='locale addcal'>Добавить в свой календарь</a>
+        <div style="clear: left"></div> 
       </div>
    </body>
 
