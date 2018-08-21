@@ -1,2 +1,3 @@
 Календарное приложение
-Основано на коде fullcalendar.io
+
+Основано на [fullcalendar.io](https://github.com/fullcalendar/fullcalendar)
