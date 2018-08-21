@@ -1,2 +1,2 @@
-# study-calendar
 Календарное приложение
+Основано на коде fullcalendar.io
